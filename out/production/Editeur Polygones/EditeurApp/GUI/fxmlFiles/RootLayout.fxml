@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.SeparatorMenuItem?>
+<?import javafx.scene.control.SplitPane?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.control.Tooltip?>
+<?import javafx.scene.effect.Blend?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="pane" style="-fx-background-color: #ffffff;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EditeurApp.GUI.Controllers.RootLayoutController">
+    <children>
+        <MenuBar layoutX="-26.0" prefHeight="25.0" prefWidth="853.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+            <menus>
+                <Menu mnemonicParsing="false" text="Fichier">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#OpenNewWindow" text="Nouveau">
+                            <graphic>
+                                <ImageView fitHeight="20.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../icons/new.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#Save" text="Sauvegarder">
+                            <graphic>
+                                <ImageView fitHeight="20.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../icons/save.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </MenuItem>
+                        <SeparatorMenuItem mnemonicParsing="false" />
+                        <MenuItem mnemonicParsing="false" onAction="#Close" text="Quitter">
+                            <graphic>
+                                <ImageView fitHeight="20.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../icons/exit.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </MenuItem>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Edition">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#COPIER" text="Copier">
+                            <graphic>
+                                <ImageView fitHeight="20.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../icons/copy-two-paper-sheets-interface-symbol.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#COLLER" text="Coller">
+                            <graphic>
+                                <ImageView fitHeight="20.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../icons/paste.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#Dupliquer" text="Dupliquer">
+                            <graphic>
+                                <ImageView fitHeight="20.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../icons/duplicate.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </MenuItem>
+                    </items>
+                </Menu>
+                <Menu mnemonicParsing="false" text="Aide">
+                    <items>
+                        <MenuItem mnemonicParsing="false" onAction="#handleAide" text="Guide d'utilisation ">
+                            <graphic>
+                                <ImageView fitHeight="20.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../icons/help.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </MenuItem>
+                        <MenuItem mnemonicParsing="false" onAction="#handleAbout" text="A propos de &quot;FORM-IT&quot;">
+                            <graphic>
+                                <ImageView fitHeight="20.0" fitWidth="40.0" pickOnBounds="true" preserveRatio="true">
+                                    <image>
+                                        <Image url="@../icons/information.png" />
+                                    </image>
+                                </ImageView>
+                            </graphic>
+                        </MenuItem>
+                    </items>
+                </Menu>
+            </menus>
+        </MenuBar>
+        <SplitPane dividerPositions="0.8763736263736263" layoutY="28.0" orientation="VERTICAL" prefHeight="470.0" prefWidth="770.0" AnchorPane.bottomAnchor="-1.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="25.0">
+            <items>
+                <AnchorPane fx:id="drawingPane" prefHeight="415.0" prefWidth="767.0" style="-fx-background-color: #fce5cd;">
+                </AnchorPane>
+                <BorderPane maxHeight="55.0" minHeight="55.0" SplitPane.resizableWithParent="false">
+                    <center>
+                        <HBox alignment="TOP_CENTER" spacing="6.0" style="-fx-background-size: 65;" styleClass="boite" BorderPane.alignment="CENTER">
+                            <children>
+                                <JFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onAction="#handleCreatePolygon" prefHeight="50.0" prefWidth="50.0" ripplerFill="#d38888" styleClass="main_btn" text="Polygone">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <effect>
+                                        <Blend />
+                                    </effect>
+                                    <graphic>
+                                        <ImageView fitHeight="34.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../icons/icons8-pentagone-50.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                    <tooltip>
+                                        <Tooltip text="Créer un polygone" />
+                                    </tooltip>
+                                </JFXButton>
+                                <JFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="69.0" layoutY="10.0" onAction="#handleCreateRectangle" prefHeight="50.0" prefWidth="50.0" ripplerFill="#d38888" styleClass="main_btn" text="Rectangle">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <effect>
+                                        <Blend />
+                                    </effect>
+                                    <graphic>
+                                        <ImageView fitHeight="34.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../icons/icons8-rectangle1-64.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                    <tooltip>
+                                        <Tooltip text="Créer un rectangle" />
+                                    </tooltip>
+                                </JFXButton>
+                                <JFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="129.0" layoutY="10.0" onAction="#handleIntersection" prefHeight="50.0" prefWidth="50.0" ripplerFill="#d38888" styleClass="main_btn" text="AND">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <effect>
+                                        <Blend />
+                                    </effect>
+                                    <font>
+                                        <Font name="System Bold" size="12.0" />
+                                    </font>
+                                    <tooltip>
+                                        <Tooltip text="AND ou Intersection" />
+                                    </tooltip>
+                                    <graphic>
+                                        <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../icons/And.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </JFXButton>
+                                <JFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="69.0" layoutY="10.0" onAction="#handleUnion" prefHeight="50.0" prefWidth="50.0" ripplerFill="#d38888" styleClass="main_btn" text="OR">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <effect>
+                                        <Blend />
+                                    </effect>
+                                    <font>
+                                        <Font name="Tahoma Bold" size="12.0" />
+                                    </font>
+                                    <tooltip>
+                                        <Tooltip text="Or ou Union" />
+                                    </tooltip>
+                                    <graphic>
+                                        <ImageView fitHeight="35.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../icons/Or.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </JFXButton>
+                                <JFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="188.0" layoutY="10.0" onAction="#handleSoustraction" prefHeight="50.0" prefWidth="50.0" ripplerFill="#d38888" styleClass="main_btn" text="SOUS">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <effect>
+                                        <Blend />
+                                    </effect>
+                                    <tooltip>
+                                        <Tooltip text="Not ou Différence" />
+                                    </tooltip>
+                                    <font>
+                                        <Font name="Tahoma Bold" size="12.0" />
+                                    </font>
+                                    <graphic>
+                                        <ImageView fitHeight="36.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../icons/not.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </JFXButton>
+                                <JFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="10.0" layoutY="10.0" onAction="#handleHmiroir" prefHeight="50.0" prefWidth="50.0" ripplerFill="#d38888" styleClass="main_btn" text="Miroir horizontal">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <effect>
+                                        <Blend />
+                                    </effect>
+                                    <font>
+                                        <Font name="Tahoma Bold" size="12.0" />
+                                    </font>
+                                    <tooltip>
+                                        <Tooltip text="Miroir horizontal">
+                                            <graphic>
+                                                <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" />
+                                            </graphic></Tooltip>
+                                    </tooltip>
+                                    <graphic>
+                                        <ImageView fitHeight="36.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../icons/M1-removebg-preview.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </JFXButton>
+                                <JFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="372.0" layoutY="12.0" onAction="#handleVmiroir" prefHeight="50.0" prefWidth="50.0" ripplerFill="#d38888" styleClass="main_btn" text="Miroir vertical">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <effect>
+                                        <Blend />
+                                    </effect>
+                                    <font>
+                                        <Font name="Tahoma Bold" size="12.0" />
+                                    </font>
+                                    <tooltip>
+                                        <Tooltip text="Miroir vertical" />
+                                    </tooltip>
+                                    <graphic>
+                                        <ImageView fitHeight="36.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../icons/M2-removebg-preview.png" />
+                                            </image></ImageView>
+                                    </graphic>
+                                </JFXButton>
+                            </children>
+                        </HBox>
+                    </center>
+                    <left>
+                        <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="140.0" styleClass="boite" BorderPane.alignment="CENTER">
+                            <children>
+                                <JFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onAction="#handleperso" opacity="0.7" prefHeight="45.0" prefWidth="45.0" ripplerFill="#cde8ee" styleClass="main_btn">
+                                    <graphic>
+                                        <ImageView fitHeight="34.0" fitWidth="28.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../icons/walppaper.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                    <tooltip>
+                                        <Tooltip text="Personnaliser" />
+                                    </tooltip>
+                                </JFXButton>
+                            </children>
+                        </HBox>
+                    </left>
+                    <right>
+                        <HBox alignment="CENTER_RIGHT" prefHeight="53.0" prefWidth="140.0" spacing="5.0" styleClass="boite" BorderPane.alignment="CENTER">
+                            <children>
+                                <JFXButton buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" onAction="#handleRubber" prefHeight="50.0" prefWidth="50.0" ripplerFill="#d38888" styleClass="main_btn" text="Miroir vertical">
+                                    <cursor>
+                                        <Cursor fx:constant="HAND" />
+                                    </cursor>
+                                    <effect>
+                                        <Blend />
+                                    </effect>
+                                    <font>
+                                        <Font name="Tahoma Bold" size="12.0" />
+                                    </font>
+                                    <tooltip>
+                                        <Tooltip text="Miroir vertical" />
+                                    </tooltip>
+                                    <graphic>
+                                        <ImageView fitHeight="33.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../icons/img_522152.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </JFXButton>
+                                <ToggleButton fx:id="penButton" mnemonicParsing="false" onAction="#handlePen" prefHeight="45.0" prefWidth="45.0" styleClass="main_btn">
+                                    <graphic>
+                                        <ImageView fitHeight="33.0" fitWidth="32.0" pickOnBounds="true" preserveRatio="true">
+                                            <image>
+                                                <Image url="@../icons/draw-icon-png-1.png" />
+                                            </image>
+                                        </ImageView>
+                                    </graphic>
+                                </ToggleButton>
+                            </children>
+                        </HBox>
+                    </right>
+                    <cursor>
+                        <Cursor fx:constant="DEFAULT" />
+                    </cursor>
+                </BorderPane>
+            </items>
+        </SplitPane>
+    </children>
+</AnchorPane>

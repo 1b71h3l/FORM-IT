@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="300.0" prefWidth="350.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EditeurApp.GUI.Controllers.DeplacementController">
+    <children>
+        <VBox prefHeight="300.0" prefWidth="70.0" style="-fx-background-color: #cceeff;" />
+        <VBox layoutX="70.0" prefHeight="300.0" prefWidth="280.0" style="-fx-background-color: #ffffff;">
+            <children>
+                <HBox alignment="CENTER" prefHeight="49.0" prefWidth="250.0" style="-fx-background-color: #ffffff;">
+                    <children>
+                        <ImageView fitHeight="33.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true" rotate="47.1">
+                            <image>
+                                <Image url="@/EditeurApp/GUI/icons/icons8-pentagone-64.png" />
+                            </image>
+                        </ImageView>
+                        <Label alignment="CENTER" text="Deplacer le polygone">
+                            <font>
+                                <Font name="Arial Nova Bold" size="15.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="47.0" prefWidth="260.0" style="-fx-background-color: #ffffff;" />
+                <HBox alignment="CENTER" prefHeight="48.0" prefWidth="260.0" style="-fx-background-color: #ffffff;">
+                    <children>
+                        <Label alignment="TOP_LEFT" prefHeight="18.0" prefWidth="92.0" text="Deplacer par " textAlignment="CENTER">
+                            <font>
+                                <Font name="Arial Nova Cond" size="14.0" />
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="18.0" prefWidth="58.0" text="dx : " textAlignment="CENTER">
+                            <font>
+                                <Font name="Arial Nova Cond" size="14.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="DepX" prefHeight="30.0" prefWidth="62.0" promptText="100" styleClass="box">
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                        </TextField>
+                        <Label alignment="CENTER" prefHeight="18.0" prefWidth="58.0" text="dy:" textAlignment="CENTER">
+                            <font>
+                                <Font name="Arial Nova Cond" size="14.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="DepY" prefHeight="30.0" prefWidth="61.0" promptText="100" styleClass="box">
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                        </TextField>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="48.0" prefWidth="260.0" style="-fx-background-color: #ffffff;" />
+                <HBox alignment="CENTER" prefHeight="61.0" prefWidth="260.0" spacing="20.0" style="-fx-background-color: #ffffff;">
+                    <children>
+                        <JFXButton fx:id="CR" minHeight="40.0" onAction="#handleApply" prefWidth="140.0" styleClass="btn" text="Appliquer" />
+                        <JFXButton fx:id="CC" minHeight="40.0" onAction="#handleCancel" prefWidth="140.0" styleClass="btn" text="Annuler" />
+                    </children>
+                </HBox>
+            </children>
+            <padding>
+                <Insets left="10.0" right="10.0" />
+            </padding>
+        </VBox>
+    </children>
+</AnchorPane>

@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="430.0" prefWidth="650.0" style="-fx-background-color: #cde8ee;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EditeurApp.GUI.Controllers.WelcomeController">
+    <children>
+        <Circle fill="#faf0af" layoutX="14.0" layoutY="327.0" radius="38.0" rotate="57.5" stroke="BLACK" strokeType="INSIDE" />
+        <HBox layoutX="230.0" layoutY="-64.0" opacity="0.16" prefHeight="129.0" prefWidth="130.0" rotate="119.0" style="-fx-background-color: #000000;" />
+        <HBox layoutX="227.0" layoutY="-70.0" prefHeight="130.0" prefWidth="130.0" rotate="119.0" style="-fx-background-color: #d38888;" />
+        <HBox layoutX="185.0" layoutY="150.0" opacity="0.6" prefHeight="150.0" prefWidth="300.0" style="-fx-background-radius: 5 5 5 5; -fx-background-color: #faf0af;" />
+        <Pane layoutX="175.0" layoutY="140.0" prefHeight="150.0" prefWidth="300.0" style="-fx-background-color: #fff08d; -fx-background-radius: 5 5 5 5;">
+            <children>
+                <HBox alignment="TOP_CENTER" layoutY="82.0" prefHeight="68.0" prefWidth="300.0">
+                    <opaqueInsets>
+                        <Insets />
+                    </opaqueInsets>
+                    <children>
+                        <JFXButton onAction="#OpenRoot" prefHeight="36.0" prefWidth="143.0" styleClass="btn" text="Commencer !">
+                            <opaqueInsets>
+                                <Insets bottom="10.0" />
+                            </opaqueInsets>
+                            <font>
+                                <Font name="Tahoma Bold" size="13.0" />
+                            </font>
+                        </JFXButton>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" layoutY="-2.0" prefHeight="88.0" prefWidth="300.0">
+                    <children>
+                        <Text fill="#d98b8b" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenue à l'application FORM-IT" textAlignment="CENTER" wrappingWidth="264.13669776916504">
+                            <font>
+                                <Font name="Arial" size="16.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </HBox>
+            </children>
+        </Pane>
+        <ImageView fitHeight="88.0" fitWidth="89.0" layoutX="522.0" layoutY="310.0" opacity="0.96" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../icons/welcome1.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="82.0" fitWidth="88.0" layoutX="22.0" layoutY="39.0" opacity="0.88" pickOnBounds="true" preserveRatio="true" rotate="-3.4">
+            <image>
+                <Image url="@../icons/iintersection.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="68.0" fitWidth="82.0" layoutX="170.0" layoutY="351.0" opacity="0.81" pickOnBounds="true" preserveRatio="true" rotate="5.0">
+            <image>
+                <Image url="@../icons/icons8-polygone-80.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="36.0" fitWidth="41.0" layoutX="189.0" layoutY="348.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@../icons/draw.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="545.0" layoutY="14.0" opacity="0.56" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: #faf0af;">
+            <image>
+                <Image url="@../icons/icons8-pentagone-64.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="555.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: #faf0af;">
+            <image>
+                <Image url="@../icons/icons8-pentagone-64.png" />
+            </image>
+        </ImageView>
+        <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="570.0" layoutY="38.0" opacity="0.56" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: #faf0af;">
+            <image>
+                <Image url="@../icons/icons8-pentagone-64.png" />
+            </image>
+        </ImageView>
+        <Button layoutX="272.0" layoutY="398.0" mnemonicParsing="false" onAction="#Aide" prefHeight="23.0" prefWidth="105.0" style="-fx-background-color: transparent;" styleClass="btn" text="Besoin d'aide ?" underline="true" />
+    </children>
+</AnchorPane>

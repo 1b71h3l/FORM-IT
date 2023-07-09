@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="457.0" prefWidth="371.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EditeurApp.GUI.Controllers.AideController">
+    <children>
+        <Pane prefHeight="117.0" prefWidth="371.0" style="-fx-background-color: #cde1ee;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <ImageView fitHeight="90.0" fitWidth="108.0" layoutX="84.0" layoutY="11.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../icons/logo.png" />
+                    </image>
+                </ImageView>
+                <Label layoutX="174.0" layoutY="47.0" text="&quot;FORM-IT&quot;">
+                    <font>
+                        <Font name="Tahoma Bold" size="14.0" />
+                    </font>
+                </Label>
+                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="29.0" layoutY="3.0" opacity="0.56" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: #faf0af;">
+                    <image>
+                        <Image url="@../icons/icons8-pentagone-64.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="22.0" layoutY="14.0" opacity="0.56" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: #faf0af;">
+                    <image>
+                        <Image url="@../icons/icons8-pentagone-64.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="24.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true" style="-fx-background-color: #faf0af;">
+                    <image>
+                        <Image url="@../icons/icons8-pentagone-64.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="40.0" fitWidth="30.0" layoutX="7.0" layoutY="77.0" opacity="0.96" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../icons/welcome1.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="42.0" fitWidth="30.0" layoutX="294.0" layoutY="78.0" opacity="0.81" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../icons/icons8-polygone-80.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="30.0" fitWidth="21.0" layoutX="299.0" layoutY="77.0" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../icons/draw.png" />
+                    </image>
+                </ImageView>
+                <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="332.0" layoutY="7.0" opacity="0.88" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../icons/iintersection.png" />
+                    </image>
+                </ImageView>
+            </children>
+        </Pane>
+        <Circle fill="#faf0af" layoutX="221.0" layoutY="3.0" radius="15.0" stroke="BLACK" strokeType="INSIDE" />
+        <ScrollPane layoutY="117.0" prefHeight="350.0" prefWidth="371.0" style="-fx-background-color: #FFFFFF;" AnchorPane.bottomAnchor="-10.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="117.0">
+            <content>
+                <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="631.0" prefWidth="355.0">
+                    <children>
+                        <Text fill="#4cbfcf" layoutX="15.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Questions répétées :" textAlignment="CENTER" wrappingWidth="321.348388671875">
+                            <font>
+                                <Font name="Times New Roman Bold Italic" size="24.0" />
+                            </font>
+                        </Text>
+                        <Text fill="#d38888" layoutX="14.0" layoutY="58.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- Comment créer un polygone ?  " wrappingWidth="286.1484375">
+                            <font>
+                                <Font name="Times New Roman Italic" size="16.0" />
+                            </font>
+                        </Text>
+                        <Text fill="#d38888" layoutX="14.0" layoutY="152.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- Comment créer un rectangle ?  " wrappingWidth="286.1484375">
+                            <font>
+                                <Font name="Times New Roman Italic" size="16.0" />
+                            </font>
+                        </Text>
+                        <Text fill="#d38888" layoutX="14.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- Comment modifier les paramètres d'un polygone (rectangle) ?  " wrappingWidth="286.1484375">
+                            <font>
+                                <Font name="Times New Roman Italic" size="16.0" />
+                            </font>
+                        </Text>
+                        <Text fill="#d38888" layoutX="14.0" layoutY="449.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- Comment déplacer un polygone (rectangle)?  " wrappingWidth="286.1484375">
+                            <font>
+                                <Font name="Times New Roman Italic" size="15.0" />
+                            </font>
+                        </Text>
+                        <Text fontSmoothingType="LCD" layoutX="34.0" layoutY="74.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" En saisissant les données nécessaire (Nombre de segments, Rayon, coordonnées du centre) dans la fenêtre qui apparâit en cliquant sur le deuxième bouton " wrappingWidth="286.1484375">
+                            <font>
+                                <Font name="Times New Roman" size="14.0" />
+                            </font>
+                        </Text>
+                        <Text fontSmoothingType="LCD" layoutX="34.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text=" En saisissant les données nécessaire (Hauteur, Largeur, Coordonnées du centre) dans la fenêtre qui apparâit en cliquant sur le troisième bouton " wrappingWidth="286.1484375">
+                            <font>
+                                <Font name="Times New Roman" size="14.0" />
+                            </font>
+                        </Text>
+                        <Text fontSmoothingType="LCD" layoutX="34.0" layoutY="273.0" strokeType="OUTSIDE" strokeWidth="0.0" text="En faisant un clique droit sur un polygone (rectangle) sélectionné une &quot;ContextMenu&quot; apparaît et en cliquant sur modifier où vous pouvez effectuer vos changement apparît" wrappingWidth="286.1484375">
+                            <font>
+                                <Font name="Times New Roman" size="14.0" />
+                            </font>
+                        </Text>
+                        <Text fontSmoothingType="LCD" layoutX="32.0" layoutY="472.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Vous povez déplacer une forme soit manuellement ou bien en introduisant les paramètres de déplacement (dans la context menu -&gt; Déplacer)" wrappingWidth="286.1484375">
+                            <font>
+                                <Font name="Times New Roman" size="14.0" />
+                            </font>
+                        </Text>
+                        <Text fontSmoothingType="LCD" layoutX="33.0" layoutY="376.0" strokeType="OUTSIDE" strokeWidth="0.0" text="En faisant un clique droit sur un polygone (rectangle) sélectionné une &quot;ContextMenu&quot; apparaît et en cliquant sur Tourner une fenêtre où vous pouvez saisir l'angle de rotation" wrappingWidth="286.1484375">
+                            <font>
+                                <Font name="Times New Roman" size="14.0" />
+                            </font>
+                        </Text>
+                        <Text fill="#d38888" layoutX="15.0" layoutY="349.0" strokeType="OUTSIDE" strokeWidth="0.0" text="- Comment tourner un polygone (rectangle)?  " wrappingWidth="321.34844970703125">
+                            <font>
+                                <Font name="Times New Roman Italic" size="16.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </AnchorPane>
+            </content>
+        </ScrollPane>
+    </children>
+</AnchorPane>

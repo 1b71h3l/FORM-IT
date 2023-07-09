@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.ColorPicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="349.0" prefWidth="350.0" style="-fx-background-color: #ffffff;" stylesheets="@style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EditeurApp.GUI.Controllers.ArrierePlanController">
+   <children>
+      <HBox alignment="CENTER" layoutX="1.0" prefHeight="50.0" prefWidth="350.0" spacing="5.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0">
+         <children>
+            <ImageView fitHeight="33.0" fitWidth="36.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/walppaper.png" />
+               </image>
+            </ImageView>
+            <Label alignment="CENTER" contentDisplay="CENTER" text="Arrière plan ">
+               <font>
+                  <Font name="Tahoma Bold" size="14.0" />
+               </font>
+            </Label>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutX="2.0" layoutY="42.0" prefHeight="197.0" prefWidth="350.0" AnchorPane.leftAnchor="2.0" AnchorPane.rightAnchor="-2.0">
+         <children>
+            <ImageView fitHeight="174.0" fitWidth="281.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../icons/arriere_plan.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutY="237.0" prefHeight="56.0" prefWidth="350.0" spacing="30.0">
+         <children>
+            <ColorPicker fx:id="DrawingColor" prefHeight="50.0" prefWidth="100.0" style="-fx-background-color: #ffffff;" styleClass="box">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+               <value>
+                  <Color red="0.9882352948188782" green="0.8980392217636108" blue="0.8039215803146362" />
+               </value>
+            </ColorPicker>
+            <Label text="Ou" />
+            <JFXButton onAction="#OpenImage" prefHeight="50.0" prefWidth="100.0" styleClass="box" text="Image">
+               <graphic>
+                  <ImageView fitHeight="28.0" fitWidth="30.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../icons/image.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+               <font>
+                  <Font name="Tahoma" size="12.0" />
+               </font></JFXButton>
+         </children>
+      </HBox>
+      <HBox alignment="CENTER" layoutY="293.0" prefHeight="56.0" prefWidth="350.0" spacing="10.0">
+         <children>
+            <JFXButton onAction="#Personaliser" prefHeight="40.0" prefWidth="140.0" styleClass="btn" text="Appliquer" />
+            <JFXButton onAction="#Cancel" prefHeight="40.0" prefWidth="140.0" styleClass="btn" text="Annuler" />
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="250.0" prefWidth="350.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="EditeurApp.GUI.Controllers.RotationController">
+    <children>
+        <VBox prefHeight="250.0" prefWidth="45.0" style="-fx-background-color: #cde8ee;" />
+        <VBox layoutX="45.0" prefHeight="250.0" prefWidth="305.0" style="-fx-background-color: #ffffff;">
+            <children>
+                <HBox alignment="CENTER" prefHeight="49.0" prefWidth="250.0" spacing="5.0" style="-fx-background-color: #ffffff;">
+                    <children>
+                        <ImageView fitHeight="30.0" fitWidth="27.0" pickOnBounds="true" preserveRatio="true" rotate="47.1">
+                            <image>
+                                <Image url="@../icons/refresh.png" />
+                            </image>
+                        </ImageView>
+                        <Label alignment="CENTER" text="Tourner le polygone">
+                            <font>
+                                <Font name="Arial Nova Bold" size="15.0" />
+                            </font>
+                        </Label>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="47.0" prefWidth="260.0" style="-fx-background-color: #ffffff;" />
+                <HBox alignment="CENTER" prefHeight="48.0" prefWidth="260.0" style="-fx-background-color: #ffffff;">
+                    <children>
+                        <Label alignment="TOP_LEFT" prefHeight="18.0" prefWidth="92.0" text="Tourner par :" textAlignment="CENTER">
+                            <font>
+                                <Font name="Tahoma" size="14.0" />
+                            </font>
+                        </Label>
+                        <Label alignment="CENTER" prefHeight="18.0" prefWidth="58.0" text="dx : " textAlignment="CENTER">
+                            <font>
+                                <Font name="Arial Nova Cond" size="14.0" />
+                            </font>
+                        </Label>
+                        <TextField fx:id="angle" prefHeight="30.0" prefWidth="49.0" promptText="100" styleClass="box">
+                            <font>
+                                <Font size="13.0" />
+                            </font>
+                        </TextField>
+                  <Label alignment="TOP_CENTER" prefHeight="23.0" prefWidth="20.0" text="°" textAlignment="CENTER">
+                     <font>
+                        <Font name="Arial Nova Cond" size="14.0" />
+                     </font>
+                  </Label>
+                    </children>
+                </HBox>
+                <HBox alignment="CENTER" prefHeight="33.0" prefWidth="260.0" style="-fx-background-color: #ffffff;" />
+                <HBox alignment="CENTER" prefHeight="61.0" prefWidth="260.0" spacing="20.0" style="-fx-background-color: #ffffff;">
+                    <children>
+                        <JFXButton fx:id="CR" maxWidth="990.0" minHeight="40.0" onAction="#handleApply" prefWidth="140.0" styleClass="btn" text="Appliquer" />
+                        <JFXButton fx:id="CC" minHeight="40.0" onAction="#handleCancel" prefWidth="140.0" styleClass="btn" text="Annuler" />
+                    </children>
+                </HBox>
+            </children>
+            <padding>
+                <Insets left="10.0" right="10.0" />
+            </padding>
+        </VBox>
+    </children>
+</AnchorPane>
